@@ -1,28 +1,112 @@
+/* 全体のスタイル */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff;
+    text-align: center;
 }
 
+/* コンテナ */
 .container {
     margin-top: 50px;
+    position: relative;
 }
 
-button {
+/* 管理画面ボタン（右上に配置） */
+.manage-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
     padding: 10px 20px;
-    margin: 10px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.manage-button:hover {
+    background-color: #e64a19;
+}
+
+/* ボタン */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* 質問表示 */
 #questionDisplay {
     margin: 20px;
     font-size: 20px;
     color: #333;
 }
 
+/* 質問追加フォーム */
 #addQuestionForm {
     margin-top: 20px;
+}
+
+#newQuestionInput {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 質問管理画面 */
+#manageQuestions {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#questionsList {
+    list-style: none;
+    padding: 0;
+}
+
+#questionsList li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    button {
+        width: 90%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    #questionDisplay {
+        font-size: 18px;
+    }
+
+    #newQuestionInput {
+        width: 100%;
+    }
 }

@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>質問アプリ</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <button id="manageQuestionsBtn" class="manage-button">質問管理画面</button>
         <h1>ランダム質問アプリ</h1>
         <button id="randomQuestionBtn">質問を出す</button>
         <p id="questionDisplay"></p>
         <button id="addQuestionBtn">新しい質問を追加</button>
-        <div id="addQuestionForm">
+        <div id="addQuestionForm" style="display: none;">
             <input type="text" id="newQuestionInput" placeholder="質問を入力">
             <button id="saveQuestionBtn">保存する</button>
+        </div>
+        <div id="manageQuestions" style="display: none;">
+            <h2>質問管理</h2>
+            <ul id="questionsList"></ul>
         </div>
     </div>
     <script src="app.js"></script>
