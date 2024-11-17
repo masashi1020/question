@@ -11,6 +11,7 @@ body {
 .container {
     margin-top: 50px;
     position: relative;
+    padding: 10px;
 }
 
 /* 管理画面ボタン（右上に配置） */
@@ -26,10 +27,17 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    z-index: 10;
 }
 
 .manage-button:hover {
     background-color: #e64a19;
+}
+
+/* タイトル */
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
 }
 
 /* ボタン */
@@ -89,11 +97,21 @@ button:hover {
     align-items: center;
 }
 
-/* モバイル対応 */
+/* レスポンシブデザイン */
 @media (max-width: 768px) {
     .container {
-        margin-top: 20px;
+        margin-top: 60px;
         padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-top: 60px; /* ボタンと重ならないように調整 */
+    }
+
+    .manage-button {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 
     button {
